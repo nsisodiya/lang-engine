@@ -31,21 +31,22 @@ langEngine.add({
 });
 
 
-langEngine.setLanguage('hi');
 
-console.log(langEngine.resolve('user_has_new_number', {
+
+var $r = langEngine.resolve;
+var userObj = {
 	name: 'Narendra',
 	newNumber: '+914545454545'
-}));
+};
+
+
+langEngine.setLanguage('hi');
+console.log($r('user_has_new_number', userObj));
 //Narendra का नया नंबर +914545454545 है
 
-
 langEngine.setLanguage('en');
-
-console.log(langEngine.resolve('user_has_new_number', {
-	name: 'Narendra',
-	newNumber: '+914545454545'
-}));
+console.log($r('user_has_new_number', userObj));
 //Narendra's new number is +914545454545
+
 
 ```
