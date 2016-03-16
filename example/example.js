@@ -1,17 +1,3 @@
-# lang-engine
-Simple way to add multi language support in your JavaScript based application
-
-# Installation
-
-```
-npm install --save lang-engine
-```
-
-# Usage
-
-```js
-import langEngine from 'lang-engine';
-
 langEngine.add({
 	max_field_lengh_error: {
 		en: "Maximum __num__ characters are allowed",
@@ -37,8 +23,6 @@ console.log(langEngine.resolve('user_has_new_number', {
 	name: 'Narendra',
 	newNumber: '+914545454545'
 }));
-//Narendra का नया नंबर +914545454545 है
-
 
 langEngine.setLanguage('en');
 
@@ -46,6 +30,3 @@ console.log(langEngine.resolve('user_has_new_number', {
 	name: 'Narendra',
 	newNumber: '+914545454545'
 }));
-//Narendra's new number is +914545454545
-
-```
